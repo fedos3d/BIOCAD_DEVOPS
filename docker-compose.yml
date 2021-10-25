@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+   container_name: app
+   build:
+    context: .
+    dockerfile: APP_Dockerfile
+   ports:
+    - 33777:8080
+
+  nginx:
+   network_mode: host
+   container_name: nginx
+   depends_on:
+    - app
+   build:
+    context: .
+    dockerfile: NGINX_Dockerfile
+   ports:
+    - 80:80
+   volumes:
+    - ./nginx_conf:/etc/nginx/conf.d
