@@ -29,7 +29,9 @@ C# также писал различные системные утилиты.</
 писал скрипты на Bash.</li>
 </ol>
 Состав сервиса:<br>
-```app.jar``` - java spring boot, где по ```http://localhost:33777/``` находится страница с Hello World.
+
+`app.java` - java spring boot, где по 
+`http://localhost:33777/` находится страница с Hello World.<br>
 Как запускать? <br>
 ```docker-compose up```
 
